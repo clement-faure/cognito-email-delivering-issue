@@ -1,16 +1,15 @@
-import { createServer } from '@graphql-yoga/node'
-import gql from 'graphql-tag'
+import { createServer } from "@graphql-yoga/node";
+import gql from "graphql-tag";
 
-import resolvers from 'lib/resolvers'
-import typeDefs from 'lib/schema'
+import resolvers from "~/api/lib/resolvers";
+import typeDefs from "~/api/lib/schema";
 
 const server = createServer({
   schema: {
     typeDefs: gql(typeDefs),
     resolvers,
   },
-  endpoint: '/api/graphql',
-  // graphiql: false // uncomment to disable GraphiQL
-})
+  endpoint: "/api/graphql",
+});
 
-export default server
+export default server;
