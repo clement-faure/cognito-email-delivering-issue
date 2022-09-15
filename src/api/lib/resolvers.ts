@@ -35,7 +35,7 @@ const resolvers: Resolvers = {
       }
 
       return {
-        importedUsersCount: 0,
+        importedUsersCount: userEmailsToImport.length,
       };
     },
   },
